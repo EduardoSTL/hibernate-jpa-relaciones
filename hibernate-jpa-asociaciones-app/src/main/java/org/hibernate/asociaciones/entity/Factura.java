@@ -72,8 +72,7 @@ public class Factura {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Factura factura = (Factura) o;
-        return Objects.equals(id, factura.id) && Objects.equals(descripcion,
-                factura.descripcion) && Objects.equals(total, factura.total);
+        return Objects.equals(id, factura.id) && Objects.equals(descripcion, factura.descripcion) && Objects.equals(total, factura.total);
     }
 
     @Override

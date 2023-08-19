@@ -28,6 +28,8 @@ public class Cliente {
     private List<Factura> facturas;
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "cliente")
     private ClienteDetalle detalle;
+
+    //Sobrecarga de constructores
     public Cliente() {
         facturas = new ArrayList<>();
         direcciones = new ArrayList<>();
