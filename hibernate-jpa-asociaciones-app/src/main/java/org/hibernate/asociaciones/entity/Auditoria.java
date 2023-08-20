@@ -16,12 +16,14 @@ public class Auditoria {
     @Column(name = "editado_en")
     private LocalDateTime editadoEn;
 
+    //antes hacer un insert
     @PrePersist
     public void prePersist() {
         System.out.println("inicializar algo justo antes del persist");
         this.creadoEn = LocalDateTime.now();
     }
 
+    //antes de actualizar registros de una tabla
     @PreUpdate
     public void preUpdate() {
         System.out.println("inicializar algo justo antes del update");
