@@ -24,8 +24,6 @@ public class Curso {
         this.profesor = profesor;
     }
 
-
-
     public Curso() {
         this.alumnos = new ArrayList<>();
     }
