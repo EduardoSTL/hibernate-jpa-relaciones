@@ -26,17 +26,20 @@ public class HibernateAsociacionesManyToMany {
             em.persist(alumno2);
 
             //Transaction 1
+            System.out.println("------ Transaction 1 ------");
             em.getTransaction().commit();//TCL
-
             System.out.println(alumno1);
+
             System.out.println(alumno2);
 
             //Transaction 2
+            System.out.println("------ Transaction 2 ------");
             em.getTransaction().begin();//TCL
             Curso c2 = em.find(Curso.class, 1L);
-            alumno1.getCursos().remove(c2);
+            alumno2.getCursos().remove(c2);
             em.getTransaction().commit();
             System.out.println(alumno1);
+            System.out.println(alumno2);
         } catch (Exception e){
             em.getTransaction().rollback();
             e.printStackTrace();
