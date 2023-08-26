@@ -17,9 +17,9 @@ public class Alumno {
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "tbl_alumnos_cursos", joinColumns = @JoinColumn(name = "alumno_id"),
             inverseJoinColumns = @JoinColumn(name = "curso_id"),
+            //restriccion en la que los campos en comun deben ser unicos para evitar repeticion
             uniqueConstraints = @UniqueConstraint(columnNames = {"alumno_id", "curso_id"}))
     private List<Curso> cursos;
-
 
     public Alumno() {
         this.cursos = new ArrayList<>();
