@@ -8,10 +8,10 @@ import org.hibernate.asociaciones.util.JpaUtil;
 public class HibernateAsociacionesManyToOne {
     public static void main(String[] args) {
 
-        System.out.println("========= START: HibernateAsociacionesManyToOne =========");
         EntityManager em = JpaUtil.getEntityManager();
 
         try {
+            System.out.println("========= START: HibernateAsociacionesManyToOne =========");
             em.getTransaction().begin();
             Cliente cliente = new Cliente("Cata", "Edu");
             cliente.setFormaPago("credito");

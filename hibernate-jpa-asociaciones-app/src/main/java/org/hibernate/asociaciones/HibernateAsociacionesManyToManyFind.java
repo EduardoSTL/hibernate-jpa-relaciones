@@ -9,6 +9,7 @@ public class HibernateAsociacionesManyToManyFind {
     public static void main(String[] args) {
         EntityManager em = JpaUtil.getEntityManager();
         try {
+            System.out.println("========= START: HibernateAsociacionesManyToManyFind =========");
             em.getTransaction().begin();
             Alumno alumno1 = new Alumno("Cata", "Edu");
             Alumno alumno2 = new Alumno("Jano", "Fernan");

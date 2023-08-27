@@ -7,10 +7,11 @@ import org.hibernate.asociaciones.util.JpaUtil;
 
 public class HibernateAsociacionesManyToOneFind {
     public static void main(String[] args) {
-        System.out.println("========= START: HibernateAsociacionesManyToOneFind =========");
+
         EntityManager em = JpaUtil.getEntityManager();
 
         try {
+            System.out.println("========= START: HibernateAsociacionesManyToOneFind =========");
             em.getTransaction().begin();
             Cliente cliente = em.find(Cliente.class, 9L);
 

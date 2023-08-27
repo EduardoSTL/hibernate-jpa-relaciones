@@ -10,6 +10,7 @@ public class HibernateAsociacionesManyToMany {
         EntityManager em = JpaUtil.getEntityManager();
 
         try {
+            System.out.println("========= START: HibernateAsociacionesManyToMany =========");
             em.getTransaction().begin();
             Alumno alumno1 = new Alumno("Cata", "Edu");
             Alumno alumno2 = new Alumno("Jaco", "Fernan");
